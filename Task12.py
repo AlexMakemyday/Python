@@ -6,12 +6,14 @@
 import math
 import random
 
-x = random.randint(0,4)
-y = random.randint(0,4)
-print(x)
-print(y)
-s = x + y
-p = x * y
+#x = random.randint(0,4)
+#y = random.randint(0,4)
+#print(x)
+#print(y)
+s = int(input("Введите сумму чисел: "))
+p = int(input("Введите произведение чисел: "))
+#s = x + y
+#p = x * y
 print(s)
 print(p)
 y = int((s - math.sqrt(s**2-4*p))/2)
