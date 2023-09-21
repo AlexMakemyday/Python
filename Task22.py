@@ -16,8 +16,6 @@ set_2 = set(list_2)
 final = set_1.intersection(set_2)
 # print(final)
 list_1 = list(final)
-# print(list_1)
-# print(type(list_1))
 list_1.sort()
 for i in list_1:
     print(i, end=' ')
