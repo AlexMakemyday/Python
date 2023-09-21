@@ -11,13 +11,13 @@ list_1 = input("Введите " + str(n) + " числа/чисел через �
 list_2 = input("Введите " + str(n) + " числа/чисел через пробел: ").split(' ')[:m]
 set_1 = set(list_1)
 set_2 = set(list_2)
-#print(set_1)
-#print(set_2)
+# print(set_1)
+# print(set_2)
 final = set_1.intersection(set_2)
-#print(final)
+# print(final)
 list_1 = list(final)
-#print(list_1)
-#print(type(list_1))
+# print(list_1)
+# print(type(list_1))
 list_1.sort()
 for i in list_1:
     print(i, end=' ')
