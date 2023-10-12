@@ -20,10 +20,10 @@ def write_file(lst):
     with open('phone.csv', 'r+', encoding='UTF-8') as data:
         f_reader = DictReader(data)
         res = list(f_reader)
-        with open('phone.csv', 'r+', encoding='UTF-8') as data:
+        with open('phone.csv', 'r+', encoding='UTF-8') as data1:
             obj = {'Фамилия': lst[0], 'Имя': lst[1], 'Телефон': lst[2]}
             res.append(obj)
-            f_writer = DictWriter(data, fieldnames=['Фамилия', 'Имя', 'Телефон'])
+            f_writer = DictWriter(data1, fieldnames=['Фамилия', 'Имя', 'Телефон'])
             f_writer.writeheader()
             f_writer.writerows(res)
 
@@ -77,13 +77,13 @@ def change_data():
 
 
 def new_data():
-        with open('phone.csv', 'a', encoding='UTF-8') as file:
-            fam = input("Введите фамилию: ")
-            name = input("Введите имя: ")
-            ph_number = input("Введите номер телефона: ")
-            new_user = {'Фамилия': fam, 'Имя': name, 'Телефон': ph_number}
-            new_data = DictWriter(file, fieldnames=['Фамилия', 'Имя', 'Телефон'])
-            new_data.writerow(new_user)
+    with open('phone.csv', 'a', encoding='UTF-8') as file:
+        fam = input("Введите фамилию: ")
+        name = input("Введите имя: ")
+        ph_number = input("Введите номер телефона: ")
+        new_user = {'Фамилия': fam, 'Имя': name, 'Телефон': ph_number}
+        data = DictWriter(file, fieldnames=['Фамилия', 'Имя', 'Телефон'])
+        data.writerow(new_user)
 
 
 def main():
@@ -122,5 +122,3 @@ def main():
 
 
 main()
-
-
